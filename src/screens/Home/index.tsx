@@ -12,13 +12,11 @@ export default function HomeScreen({ navigation }: any) {
       <Header />
       <Map />
       <NavBar />
-      <ButtonControl />
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button
-          title="Go to Activity"
-          onPress={() => navigation.navigate('Activity')}
-        />
-      </View>
+      <ButtonControl
+        navigation: any
+        title: string
+        backgroundColor: string
+        textColor: string />
     </>
   );
 }

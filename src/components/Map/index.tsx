@@ -1,14 +1,13 @@
 import React from 'react';
-import { View, Button } from 'react-native';
+import { View } from 'react-native';
+import { MapImage } from './styles';
+import fakeMap from '../../../assets/fakeMap.png'
 
 
 export default function Map({ navigation }: any) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        title="Map"
-        onPress={() => navigation.navigate('Home')}
-      />
+    <View>
+      <MapImage src={fakeMap} />
     </View>
   );
 }

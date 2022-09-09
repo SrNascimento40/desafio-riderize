@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 export const DivHeader = styled.div`
   box-sizing: border-box;
-  padding: 16px;
   display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
   flex-direction: row;
   align-items: center;
   width: 100%;
@@ -13,8 +14,8 @@ export const DivHeader = styled.div`
   background: #FFFFFF;
 `
 export const Icon = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
 `
 
 export const Title = styled.h3`
