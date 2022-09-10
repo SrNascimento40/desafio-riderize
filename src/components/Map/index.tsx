@@ -1,13 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
-import { MapImage } from './styles';
+import { Image, View } from 'react-native';
 import fakeMap from '../../../assets/fakeMap.png'
 
+interface iMap {
+  height: string
+}
 
-export default function Map({ navigation }: any) {
+export default function Map(props:iMap) {
   return (
     <View>
-      <MapImage src={fakeMap} />
+      <Image style={{ width: '100%', height:props.height }} source={fakeMap} />
     </View>
   );
 }

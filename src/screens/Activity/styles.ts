@@ -9,6 +9,6 @@ export const DivButton = styled.div`
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 16px;
+  padding-right: 16px;
 `
