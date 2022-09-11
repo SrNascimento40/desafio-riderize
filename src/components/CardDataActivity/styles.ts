@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
-export const CardDiv = styled.div`
+export const CardView = styled.View`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,14 +9,14 @@ export const CardDiv = styled.div`
   background-color: white;
 `
 
-export const DivData = styled.div`
+export const ViewData = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 `
-export const PlaceText = styled.p`
+export const PlaceText = styled.Text`
   font-family: 'Neuzeit Grotesk';
   font-style: normal;
   font-weight: 400;

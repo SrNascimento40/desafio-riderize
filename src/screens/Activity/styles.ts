@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
-export const DivButton = styled.div`
+export const ViewButton = styled.View`
   box-sizing: border-box;
   display: flex;
   align-items: center;

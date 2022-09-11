@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
-export const DivNav = styled.div`
+export const ViewNav = styled.View`
   box-sizing: border-box;
   display: flex;
   padding-left: 1rem;
@@ -13,7 +13,7 @@ export const DivNav = styled.div`
   gap: 16px;
   background: #FFFFFF;
 `
-export const IconNav = styled.img`
+export const IconNav = styled.Image`
   height: 20px;
   width: 20px;
   padding-top:19px;

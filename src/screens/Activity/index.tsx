@@ -3,7 +3,7 @@ import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import CardDataActivity from '../../components/CardDataActivity';
 import Header from '../../components/Header';
 import Map from '../../components/Map';
-import { DivButton } from './styles';
+import { ViewButton } from './styles';
 
 
 export default function ActivityScreen({ navigation }: any) {
@@ -14,13 +14,13 @@ export default function ActivityScreen({ navigation }: any) {
       height='40vh'
       />
       <CardDataActivity />
-      <DivButton>
+      <ViewButton>
         <TouchableOpacity
           style={styles.genericButton}
           onPress={() => navigation.navigate('Home')}>
           <Text style={styles.buttonText}>Parar</Text>
         </TouchableOpacity>
-      </DivButton>
+      </ViewButton>
     </>
   );
 }

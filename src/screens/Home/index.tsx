@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import { Icon } from '../../components/Header/styles';
 import Map from '../../components/Map';
 import NavBar from '../../components/NavBar';
-import { DivButton } from './styles';
+import { ViewButton } from './styles';
 import backIcon from '../../../assets/icons/rightArrow.png'
 
 
@@ -17,14 +17,14 @@ export default function HomeScreen({ navigation }: any) {
       height= '71vh'
       />
       <NavBar />
-      <DivButton>
+      <ViewButton>
         <TouchableOpacity
           style={styles.genericButton}
           onPress={() => navigation.navigate('Activity')}>
           <Text style={styles.buttonText}>Iniciar atividade</Text>
-          <Icon src={backIcon} />
+          <Icon source={backIcon} />
         </TouchableOpacity>
-      </DivButton>
+      </ViewButton>
     </>
   );
 }
