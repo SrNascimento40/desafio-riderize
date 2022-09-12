@@ -7,6 +7,8 @@ export const CardView = styled.View`
   justify-content: center;
   align-items: center;
   background-color: white;
+  padding-left: 5%;
+  padding-right: 5%;
 `
 
 export const ViewData = styled.View`

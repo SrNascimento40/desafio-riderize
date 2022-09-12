@@ -6,15 +6,16 @@ import Map from '../../components/Map';
 import NavBar from '../../components/NavBar';
 import { ViewButton } from './styles';
 import backIcon from '../../../assets/icons/rightArrow.png'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 
 export default function HomeScreen({ navigation }: any) {
   return (
-    <>
+    <SafeAreaView style={styles.container}>
       <Header />
-      <Map 
-      height= '71vh'
+      <Map
+        height='71%'
       />
       <NavBar />
       <ViewButton>
@@ -25,24 +26,30 @@ export default function HomeScreen({ navigation }: any) {
           <Icon source={backIcon} />
         </TouchableOpacity>
       </ViewButton>
-    </>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   genericButton: {
     display: 'flex',
-    flexDirection:'row',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     height: 48,
     width: '100%',
     borderRadius: 100,
     padding: 24,
     backgroundColor: "#0564FF"
   },
+  container: {
+    flex: 1,
+  },
   buttonText: {
     fontFamily: "sans-serif",
-    color: "white"
+    color: "white",
+    fontWeight: "400",
+    fontsize: 16,
+    lineheight: 20,
   }
 })
