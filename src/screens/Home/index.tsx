@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     height: 48,
     width: '100%',
-    backgroundColor: "#0564FF",
     borderRadius: 100,
-    padding: 24
+    padding: 24,
+    backgroundColor: "#0564FF"
   },
   buttonText: {
-    fontFamily: "NeuzeitGro",
+    fontFamily: "sans-serif",
     color: "white"
   }
 })

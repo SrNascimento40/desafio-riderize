@@ -8,10 +8,16 @@ interface iMap {
 }
 
 
-export default function Map(props: iMap) {    
+export default function Map(props: iMap) {
   return (
     <View>
-      <MapView style={{ width: '100%', height: props.height }} />
+      <MapView style={{ width: '100%', height: props.height }}
+        region={{
+          latitude: 40.567,
+          longitude: -25.983,
+          latitudeDelta: 0.1,
+          longitudeDelta: 0.1 }}
+          />
     </View>
   );
 }

@@ -34,14 +34,13 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     height: 48,
     width: '100%',
-    backgroundColor: "white",
     borderRadius: 100,
-    padding: 24,
+    backgroundColor: "white",
     border: '1px solid',
     color: "#FF2525"
   },
   buttonText: {
-    fontFamily: "NeuzeitGro",
+    fontFamily: "sans-serif",
     color: "#FF2525"
   }
 })

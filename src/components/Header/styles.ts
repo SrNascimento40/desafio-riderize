@@ -4,13 +4,14 @@ import styled from 'styled-components/native'
 export const ViewHeader = styled.View`
   box-sizing: border-box;
   display: flex;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
   flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background: #FFFFFF;
 `
 export const Icon = styled.Image`
@@ -19,7 +20,7 @@ export const Icon = styled.Image`
 `
 
 export const Title = styled.Text`
-  font-family: 'Neuzeit Grotesk';
+  font-family: 'sans-serif';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;

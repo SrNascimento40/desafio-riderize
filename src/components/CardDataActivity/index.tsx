@@ -26,13 +26,13 @@ export default function CardDataActivity({ navigation }: any) {
 
 const styles = StyleSheet.create({
   describeText: {
-    fontFamily: 'NeuzeitGro',
+    fontFamily: 'sans-serif',
     fontSize: 24,
     fontWeight: '400',
     paddingVertical: 16
   },
   functionalText: {
-    fontFamily: 'Neuzeit Grotesk',
+    fontFamily: 'sans-serif',
     lineHeight: 72,
     fontSize: 64,
     fontWeight: '900',

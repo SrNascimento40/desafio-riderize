@@ -17,7 +17,7 @@ export const ViewData = styled.View`
   width: 100%;
 `
 export const PlaceText = styled.Text`
-  font-family: 'Neuzeit Grotesk';
+  font-family: 'sans-serif';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
