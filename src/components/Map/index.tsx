@@ -31,7 +31,10 @@ export default function Map(props: iMap) {
         longitudeDelta: 1,
       })
       const cityLocated = await Location.reverseGeocodeAsync( {longitude:location.coords.longitude, latitude:location.coords.latitude} )
-      console.log(cityLocated);
+      console.log(!location ? 'Waiting' : JSON.stringify(cityLocated[0]["subregion"]));
+      
+      // devolve isso [{"city": null, "country": "Brasil", "district": "Terra Nova", "subregion": "Taubaté"...
+
       
     })();
   }, []));
@@ -45,7 +48,6 @@ export default function Map(props: iMap) {
 
   return (
     <View style={{ width: '100%', height: props.height }}>
-      {/* <Mapp /> */}
       <MapView style={{ width: '100%', height: '100%' }}
         region={origin}
         showsUserLocation={true}

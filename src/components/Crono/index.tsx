@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Text } from 'react-native';
 
+
+
 export default function Crono() {
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(0)
