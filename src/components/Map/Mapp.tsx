@@ -16,6 +16,7 @@ export default function Mapp() {
 
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
+      
     })();
   }, []);
 

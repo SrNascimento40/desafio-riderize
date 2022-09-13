@@ -1,25 +1,58 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import MapView from 'react-native-maps';
 import Mapp from './Mapp';
+import * as Location from 'expo-location';
+import { useFocusEffect } from '@react-navigation/native';
 
 
 interface iMap {
   height: string
 }
 
-
 export default function Map(props: iMap) {
+  const [location, setLocation] = useState<any>();
+  const [errorMsg, setErrorMsg] = useState('');
+  const [origin, setOrigin] = useState<any>();
+
+  useFocusEffect(React.useCallback(() => {
+    (async function () {
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        return;
+      }
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+      setOrigin({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        latitudeDelta: 1,
+        longitudeDelta: 1,
+      })
+      const cityLocated = await Location.reverseGeocodeAsync( {longitude:location.coords.longitude, latitude:location.coords.latitude} )
+      console.log(cityLocated);
+      
+    })();
+  }, []));
+
+  let text = 'Waiting..';
+  if (errorMsg) {
+    text = errorMsg;
+  } else if (location) {
+    text = JSON.stringify(location);
+  }
+
   return (
-    <View  style={{ width: '100%', height: props.height }}>
-      <Mapp />
-      {/* <MapView
-        region={{
-          latitude: 40.567,
-          longitude: -25.983,
-          latitudeDelta: 0.1,
-          longitudeDelta: 0.1 }}
-          /> */}
+    <View style={{ width: '100%', height: props.height }}>
+      {/* <Mapp /> */}
+      <MapView style={{ width: '100%', height: '100%' }}
+        region={origin}
+        showsUserLocation={true}
+        showsMyLocationButton={true}
+        zoomEnabled={true}
+        zoomControlEnabled={true}
+        zoomTapEnabled={true} />
     </View>
   );
 }
