@@ -76,7 +76,7 @@ export default function CardDataActivity(props: iActivity) {
   return (
     <CardView>
       <PlaceText style={{ paddingBottom: 7, paddingTop: 20 }}>Você está pedalando em:</PlaceText>
-      <PlaceText style={{ fontWeight: 'bolder', paddingBottom: 10 }}>{cityActual}</PlaceText>
+      <PlaceText style={{ fontWeight: 'bolder', paddingBottom: 10 }}>{cityActual.substring(1, cityActual.length-1)}</PlaceText>
       <Text style={styles.describeText}>tempo</Text>
       <Text style={{ fontFamily: 'sans-serif', lineHeight: 72, fontSize: 64, fontWeight: '900', paddingBottom: 10 }}>{hours > 9? hours : '0' + hours}:{minutes > 9? minutes : '0' + minutes}:{seconds > 9? seconds : '0' + seconds}</Text>
       <ViewData>

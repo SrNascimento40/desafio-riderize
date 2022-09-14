@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import CardDataActivity from '../../components/CardDataActivity';
 import Header from '../../components/Header';
 import Map from '../../components/Map';
-import { ViewButton } from './styles';
+import { ViewButton } from '../Home/styles';
 
 
 export default function ActivityScreen({ navigation }: any) {
@@ -28,7 +28,7 @@ export default function ActivityScreen({ navigation }: any) {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Header />
       <Map
         height='40%'
@@ -52,15 +52,15 @@ export default function ActivityScreen({ navigation }: any) {
 
 const styles = StyleSheet.create({
   genericButton: {
+    borderColor: '#FF2525',
+    borderWidth: 1,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     height: 48,
     width: '100%',
     borderRadius: 100,
-    backgroundColor: "white",
-    border: '1px solid',
-    color: "#FF2525"
+    backgroundColor: "#fff",
   },
   container: {
     flex: 1,

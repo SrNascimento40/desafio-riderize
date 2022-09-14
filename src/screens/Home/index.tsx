@@ -15,14 +15,14 @@ export default function HomeScreen({ navigation }: any) {
     <SafeAreaView style={styles.container}>
       <Header />
       <Map
-        height='71%'
+        height='72%'
       />
       <NavBar />
       <ViewButton>
         <TouchableOpacity
           style={styles.genericButton}
           onPress={() => navigation.navigate('Activity')}>
-          <Text style={styles.buttonText}>Iniciar atividade</Text>
+          <Text style={styles.buttonText}>Iniciar Atividade</Text>
           <Icon source={backIcon} />
         </TouchableOpacity>
       </ViewButton>
@@ -38,16 +38,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     height: 48,
     width: '100%',
+    paddingHorizontal: 25,
     borderRadius: 100,
-    padding: 24,
-    backgroundColor: "#0564FF"
+    backgroundColor: "#0564FF",
   },
   container: {
     flex: 1,
   },
   buttonText: {
     fontFamily: "sans-serif",
-    color: "white",
+    color: "#fff",
     fontWeight: "400",
     fontsize: 16,
     lineheight: 20,
