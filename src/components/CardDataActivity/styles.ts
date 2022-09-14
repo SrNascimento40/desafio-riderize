@@ -9,6 +9,8 @@ export const CardView = styled.View`
   background-color: white;
   padding-left: 5%;
   padding-right: 5%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 `
 
 export const ViewData = styled.View`

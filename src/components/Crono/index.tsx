@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Text } from 'react-native';
 
+interface iCrono {
+    startStop:boolean;
+    clearTimer:boolean
+}
 
-
-export default function Crono() {
+export default function Crono(props:iCrono) {
     const [seconds, setSeconds] = useState(0)
     const [minutes, setMinutes] = useState(0)
     const [hour, setHour] = useState(0)
@@ -43,6 +46,17 @@ export default function Crono() {
             )
         })
     }
+
+    if (props.startStop==true) {
+        start()
+    } else {
+        stop()
+    }
+    if (props.clearTimer==true){
+        clear()
+    }
+
+
     return (
         <Text style={{fontFamily: 'sans-serif', lineHeight: 72, fontSize: 64, fontWeight: '900',paddingBottom: 10}}>
             {minutes < 10 ? '0'+ minutes : minutes }:
