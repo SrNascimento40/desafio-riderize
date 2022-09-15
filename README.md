@@ -1,6 +1,6 @@
 # Desafio-Riderize
 
-Desafio proposto pela empresa Riderize, com a ideia de desenvolver um App de tracking para ciclistas.
+Desafio proposto pela empresa Riderize, com a ideia de desenvolver um App para ciclistas.
 
 <br>
 <div style='display=flex;'>
