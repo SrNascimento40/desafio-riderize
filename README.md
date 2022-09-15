@@ -22,3 +22,4 @@ Desafio proposto pela empresa Riderize, com a ideia de desenvolver um App para c
 - Typescript
 - React-Navigation
 - Expo
+- Styled-Components
