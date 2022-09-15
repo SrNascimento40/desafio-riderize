@@ -18,7 +18,7 @@ Desafio proposto pela empresa Riderize, com a ideia de desenvolver um App para c
 
 # Tecnologias usadas
 
-React Native
-Typescript
-React-Navigation
-Expo
+- React Native
+- Typescript
+- React-Navigation
+- Expo
